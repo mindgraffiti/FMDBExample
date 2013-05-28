@@ -14,7 +14,7 @@ static NSString *dbFileName = @"database.sqlite";
 @implementation DataManager
 
 // the point is to only run this init method once ever.
-+ (id)sharedDataManager{
++ (id)sharedDatabaseManager{
     @synchronized(self){
         if (dMan == nil) {
             dMan = [[self alloc] init];
@@ -68,28 +68,60 @@ static NSString *dbFileName = @"database.sqlite";
 
 // method to create our UUID
 - (NSString *)getNewUUID {
-    
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     CFRelease(theUUID);
-    
     // convert CFStringRef to NSString directly by using __bridge
     // this is just memory management.
     return (__bridge NSString *)string;
 }
 
-- (BOOL)saveNewContact:(Contact *)newContact {
-    BOOL success = NO;
-    if (newContact) {
-        newContact.contactID = [self getNewUUID];
-        newContact.dateCreated = [NSDate date];
-        newContact.lasteUpdated = [NSDate date];
-        
-        NSString *query = [newContact insertQuery];
-        success = [self.database executeQuery:query];
+- (Contact *)fetchContactWithID:(NSString *)contactID{
+    Contact *result = nil;
+    
+    if (contactID != nil) {
+        result = [Contact fetchContactByID:contactID dataBase:self.database];
     }
-    return success;
+    return result;
 }
 
+#pragma mark - fetch methods
+- (NSArray*)fetchAllContacts {
+    // Query the database for all contacts and return as result array.
+    NSArray *result = [Contact fetchAllContacts:self.database];
+    
+    // Return
+    return result;
+}
+
+- (BOOL)saveNewContact:(Contact *)newContact {
+    BOOL saved = NO;
+    if (newContact != nil) {
+        newContact.contactID = [self getNewUUID];
+        newContact.dateCreated = [NSDate date];
+        newContact.lastUpdated = [NSDate date];
+        saved = [newContact insert:self.database];
+    }
+    return saved;
+}
+
+- (BOOL)updateExistingContact:(Contact *)existingContact{
+    BOOL updated = NO;
+    
+    if (existingContact != nil) {
+        existingContact.lastUpdated = [NSDate date];
+        updated = [existingContact update:self.database];
+    }
+    return updated;
+}
+
+- (BOOL)deleteContact:(Contact *)contactToDelete{
+    BOOL deleted = NO;
+    
+    if (contactToDelete != nil) {
+        deleted = [contactToDelete delete:self.database];
+    }
+    return deleted;
+}
 
 @end

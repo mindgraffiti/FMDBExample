@@ -13,8 +13,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    DataManager *dMan = [DataManager sharedDataManager];
-    // Override point for customization after application launch.
+    DataManager *dMan = [DataManager sharedDatabaseManager];
+    [dMan checkAndCreateDatabase];
     return YES;
 }
 							

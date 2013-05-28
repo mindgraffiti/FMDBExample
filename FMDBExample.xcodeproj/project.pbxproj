@@ -17,7 +17,7 @@
 		AF921F70174C3A02007FB5EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF921F6F174C3A02007FB5EB /* Default@2x.png */; };
 		AF921F72174C3A02007FB5EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF921F71174C3A02007FB5EB /* Default-568h@2x.png */; };
 		AF921F75174C3A02007FB5EB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF921F73174C3A02007FB5EB /* MainStoryboard.storyboard */; };
-		AF921F78174C3A02007FB5EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921F77174C3A02007FB5EB /* ViewController.m */; };
+		AF921F78174C3A02007FB5EB /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921F77174C3A02007FB5EB /* ContactListViewController.m */; };
 		AF921F7F174C4043007FB5EB /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF921F7E174C4043007FB5EB /* libsqlite3.0.dylib */; };
 		AF921F82174C4147007FB5EB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921F81174C4147007FB5EB /* DataManager.m */; };
 		AF921F8E174C41C2007FB5EB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921F85174C41C2007FB5EB /* FMDatabase.m */; };
@@ -27,6 +27,8 @@
 		AF921F92174C41C2007FB5EB /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921F8D174C41C2007FB5EB /* FMResultSet.m */; };
 		AF921F94174C426A007FB5EB /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AF921F93174C426A007FB5EB /* database.sqlite */; };
 		AF921F97174C4AC4007FB5EB /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = AF921F96174C4AC4007FB5EB /* Contact.m */; };
+		AF95616517556AAC002C2071 /* AddEditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF95616417556AAC002C2071 /* AddEditContactViewController.m */; };
+		AF95616817556C8B002C2071 /* ContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF95616717556C8B002C2071 /* ContactDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +46,8 @@
 		AF921F6F174C3A02007FB5EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF921F71174C3A02007FB5EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AF921F74174C3A02007FB5EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AF921F76174C3A02007FB5EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF921F77174C3A02007FB5EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF921F76174C3A02007FB5EB /* ContactListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
+		AF921F77174C3A02007FB5EB /* ContactListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactListViewController.m; sourceTree = "<group>"; };
 		AF921F7E174C4043007FB5EB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AF921F80174C4147007FB5EB /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		AF921F81174C4147007FB5EB /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
@@ -62,6 +64,10 @@
 		AF921F93174C426A007FB5EB /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		AF921F95174C4AC4007FB5EB /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		AF921F96174C4AC4007FB5EB /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		AF95616317556AAC002C2071 /* AddEditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditContactViewController.h; sourceTree = "<group>"; };
+		AF95616417556AAC002C2071 /* AddEditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditContactViewController.m; sourceTree = "<group>"; };
+		AF95616617556C8B002C2071 /* ContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailsViewController.h; sourceTree = "<group>"; };
+		AF95616717556C8B002C2071 /* ContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +124,13 @@
 				AF921F80174C4147007FB5EB /* DataManager.h */,
 				AF921F81174C4147007FB5EB /* DataManager.m */,
 				AF921F73174C3A02007FB5EB /* MainStoryboard.storyboard */,
-				AF921F76174C3A02007FB5EB /* ViewController.h */,
-				AF921F77174C3A02007FB5EB /* ViewController.m */,
+				AF921F76174C3A02007FB5EB /* ContactListViewController.h */,
+				AF921F77174C3A02007FB5EB /* ContactListViewController.m */,
 				AF921F62174C3A02007FB5EB /* Supporting Files */,
+				AF95616317556AAC002C2071 /* AddEditContactViewController.h */,
+				AF95616417556AAC002C2071 /* AddEditContactViewController.m */,
+				AF95616617556C8B002C2071 /* ContactDetailsViewController.h */,
+				AF95616717556C8B002C2071 /* ContactDetailsViewController.m */,
 			);
 			path = FMDBExample;
 			sourceTree = "<group>";
@@ -226,7 +236,7 @@
 			files = (
 				AF921F68174C3A02007FB5EB /* main.m in Sources */,
 				AF921F6C174C3A02007FB5EB /* AppDelegate.m in Sources */,
-				AF921F78174C3A02007FB5EB /* ViewController.m in Sources */,
+				AF921F78174C3A02007FB5EB /* ContactListViewController.m in Sources */,
 				AF921F82174C4147007FB5EB /* DataManager.m in Sources */,
 				AF921F8E174C41C2007FB5EB /* FMDatabase.m in Sources */,
 				AF921F8F174C41C2007FB5EB /* FMDatabaseAdditions.m in Sources */,
@@ -234,6 +244,8 @@
 				AF921F91174C41C2007FB5EB /* FMDatabaseQueue.m in Sources */,
 				AF921F92174C41C2007FB5EB /* FMResultSet.m in Sources */,
 				AF921F97174C4AC4007FB5EB /* Contact.m in Sources */,
+				AF95616517556AAC002C2071 /* AddEditContactViewController.m in Sources */,
+				AF95616817556C8B002C2071 /* ContactDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +368,7 @@
 				AF921F7D174C3A02007FB5EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

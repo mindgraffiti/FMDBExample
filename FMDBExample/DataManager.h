@@ -13,7 +13,12 @@
 @interface DataManager : NSObject
 
 @property (strong, nonatomic) FMDatabase *database;
-+ (id)sharedDataManager;
++ (id)sharedDatabaseManager;
 - (void)checkAndCreateDatabase;
-
+- (NSString *)getNewUUID;
+- (Contact *)fetchContactWithID:(NSString *)contactID;
+- (NSArray *)fetchAllContacts;
+- (BOOL)saveNewContact:(Contact *)newContact;
+- (BOOL)updateExistingContact:(Contact *)existingContact;
+- (BOOL)deleteContact:(Contact *)contactToDelete;
 @end
